@@ -1,0 +1,17 @@
+[package]
+name = "mcp-server-grok-video"
+version = "0.1.0"
+edition = "2024"
+description = "MCP server for Grok video generation (text-to-video, image-to-video, video editing)"
+
+[dependencies]
+rmcp = { version = "1.2", features = ["server", "transport-io"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+schemars = "1"
+reqwest = { version = "0.12", features = ["json", "stream"] }
+futures-util = "0.3"
+toml = "0.8"
+base64 = "0.22"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
